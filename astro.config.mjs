@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
-
-import solid from "@astrojs/solid-js";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [solid(), tailwind()]
+  integrations: [tailwind()],
+  site: 'https://yend724.github.io/',
+  base: '/learning-coding-math'
 });

@@ -7,10 +7,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "pages": "gh-pages -d dist",
     "deploy": "rm -rf dist && yarn build && gh-pages -d dist"
   },
   "devDependencies": {
-    "@astrojs/solid-js": "^0.1.4",
     "@astrojs/tailwind": "^0.2.1",
     "astro": "^1.0.0-beta.40",
     "gh-pages": "^4.0.0",
