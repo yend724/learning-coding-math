@@ -23,7 +23,7 @@ const { content } = Astro.props;
       <article id="post" class="max-w-4xl mx-auto w-full">
         <slot />
       </article>
-      <div class="mt-12 marker:mx-auto text-center"><a class="text-sky-500" href="../../">Topへもどる</a></div>
+      <div class="mt-12 marker:mx-auto text-center"><a class="text-sky-300" href="../../">Topへもどる</a></div>
     </main>
     <footer class="px-8">
       <div class="relative w-full max-w-4xl mx-auto flex items-center justify-center h-12">
@@ -36,41 +36,34 @@ const { content } = Astro.props;
 
 <style is:global>
   #post > * + * {
-    @apply mt-6;
+    @apply mt-4;
   }
   #post h1 {
-    @apply text-4xl;
+    @apply text-2xl;
   }
   #post > * + h1  {
     @apply mt-16;
   }
   #post h2 {
-    @apply text-3xl;
-  }
-  #post > * + h2  {
-    @apply mt-12;
-  }
-  #post h3 {
-    @apply text-2xl;
-  }
-  #post > * + h3 {
-    @apply mt-10;
-  }
-  #post h4 {
     @apply text-xl;
   }
-  #post > * + h4 {
-    @apply mt-8;
+  #post > * + h2  {
+    @apply mt-16;
   }
-  #post h5 {
+  #post h3 {
     @apply text-lg;
   }
-  #post h6 {
+  #post > * + h3 {
+    @apply mt-12;
+  }
+  #post h4, #post h5, #post h6 {
     @apply text-base;
+  }
+  #post > * + h4, #post > * + h5, #post > * + h6 {
+    @apply mt-12;
   }
   #post p {
     @apply text-base;
-    line-height: 2;
   }
   #post pre {
     @apply px-4 py-2;
