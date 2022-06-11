@@ -19,7 +19,7 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
     <header class="px-8">
       <div class="relative w-full max-w-4xl mx-auto flex items-center justify-center h-40">
         <div class="absolute top-0 left-[3px] w-[3px] h-full bg-slate-600"></div>
-        <h1 class="text-2xl font-bold text-center whitespace-pre" set:html={site.siteNameForHtml} />
+        <h1 class="text-2xl font-bold text-center">Creative Codingと<br class="md:hidden">数学を学ぶブログ</h1>
       </div>
     </header>
     <main class="px-8">
@@ -28,7 +28,6 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
           <div class="absolute top-0 left-[3px] w-[3px] h-full bg-slate-600"></div>
           {
             allPosts.map(async (post)=>{
-              const compiledContent = await post.compiledContent();
               const d = new Date(post.frontmatter.date);
               const published = `${d.getFullYear()}.${("00" + (d.getMonth() + 1)).slice(-2)}.${("00" + d.getDate()).slice(-2)}`
               return (

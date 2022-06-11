@@ -5,10 +5,8 @@ body {
   @apply text-neutral-200;
 }
 body {
-  @apply bg-neutral-900 bg-[length:2rem_2rem] bg-[center_top];
+  @apply bg-neutral-900;
   font-family: "Lato", "BIZ UDGothic", sans-serif;
-  background-image: linear-gradient(90deg, #0f172a 1px, transparent 0),
-    linear-gradient(0deg, #0f172a 1px, transparent 0);
 }
 [data-wrapper] {
   width: 100%;
