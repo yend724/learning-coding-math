@@ -1,0 +1,94 @@
+---
+import "@/styles/common.css"
+import site from "@/data/site.json"
+import PostHeader from "@/components/feature/post/PostHeader.astro"
+
+const { content } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{content.title} | {site.siteName}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div data-wrapper="Post" class="grid grid-cols-1 grid-rows-[auto_1fr_auto]">
+    <PostHeader title={content.title} date={content.date} />
+    <main class="px-8 pb-8 grid grid-cols-1 grid-rows-[1fr_auto]">
+      <article id="post" class="max-w-4xl mx-auto w-full">
+        <slot />
+      </article>
+      <div class="mt-12 marker:mx-auto text-center"><a class="text-sky-500" href="/">Topへもどる</a></div>
+    </main>
+    <footer class="px-8">
+      <div class="relative w-full max-w-4xl mx-auto flex items-center justify-center h-12">
+        <small>© 2022 YEND</small>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
+<style is:global>
+  #post > * + * {
+    @apply mt-6;
+  }
+  #post h1 {
+    @apply text-4xl;
+  }
+  #post > * + h1  {
+    @apply mt-16;
+  }
+  #post h2 {
+    @apply text-3xl;
+  }
+  #post > * + h2  {
+    @apply mt-12;
+  }
+  #post h3 {
+    @apply text-2xl;
+  }
+  #post > * + h3 {
+    @apply mt-10;
+  }
+  #post h4 {
+    @apply text-xl;
+  }
+  #post > * + h4 {
+    @apply mt-8;
+  }
+  #post h5 {
+    @apply text-lg;
+  }
+  #post h6 {
+    @apply text-base;
+  }
+  #post p {
+    @apply text-base;
+  }
+  #post pre {
+    @apply px-4 py-2;
+  }
+  #post ul {
+    @apply pl-6;
+    list-style: disc;
+  }
+  #post ol {
+    @apply pl-6;
+    list-style: decimal;
+  }
+  #post blockquote * {
+    @apply pl-4 text-gray-500 border-l-4 border-gray-300;
+  }
+  #post a {
+    @apply text-sky-500 underline underline-offset-2 hover:no-underline;
+  }
+  #post hr {
+    @apply border-gray-500 border-2;
+  }
+</style>
