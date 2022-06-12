@@ -12,8 +12,8 @@ const url = new URL(Astro.request.url);
   <title>404 Not Found | {site.siteName}</title>
   <meta name="description" content={site.description} />
   <meta property="og:site_name" content={site.siteName} />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={site.siteName} />
+  <meta property="og:type" content="article">
+  <meta property="og:title" content={`404 Not Found | ${site.siteName}`} />
   <meta property="og:description" content={site.description} />
   <meta property="og:image" content={`${url.origin}/img/ogp.png`} />
   <meta property="twitter:card" content="summary_large_image" />

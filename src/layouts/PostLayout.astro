@@ -4,6 +4,7 @@ import site from "@/data/site.json"
 import PostHeader from "@/components/feature/post/PostHeader.astro"
 const { content } = Astro.props;
 const url = new URL(Astro.request.url);
+const canonical = url.href.endsWith("/") ? url.href : url.href + "/";
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -21,7 +22,7 @@ const url = new URL(Astro.request.url);
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:site" content="@yend724" />
   <meta property="twitter:creator" content="@yend724" />
-  <link rel="canonical" href={url.href} />
+  <link rel="canonical" href={canonical} />
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
