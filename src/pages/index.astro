@@ -24,7 +24,7 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
     </header>
     <main class="px-8">
       <div class="mx-auto h-full">
-        <div class="relative flex flex-col gap-y-4 max-w-4xl h-full mx-auto pb-12">
+        <div class="relative flex flex-col gap-y-4 max-w-4xl h-full mx-auto pb-16">
           <div class="absolute top-0 left-0 w-[3px] h-full bg-slate-600"></div>
           {
             allPosts.map(async (post)=>{
