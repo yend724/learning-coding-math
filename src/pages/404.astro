@@ -1,8 +1,6 @@
 ---
 import "@/styles/common.css"
 import site from "@/data/site.json"
-import PostHeader from "@/components/feature/post/PostHeader.astro"
-const { content } = Astro.props;
 const url = new URL(Astro.request.url);
 ---
 <!DOCTYPE html>
@@ -11,17 +9,17 @@ const url = new URL(Astro.request.url);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{content.title} | {site.siteName}</title>
+  <title>404 Not Found | {site.siteName}</title>
   <meta name="description" content={site.description} />
   <meta property="og:site_name" content={site.siteName} />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content={`${content.title} | ${site.siteName}`} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={site.siteName} />
   <meta property="og:description" content={site.description} />
   <meta property="og:image" content={`${url.origin}/img/ogp.png`} />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:site" content="@yend724" />
   <meta property="twitter:creator" content="@yend724" />
-  <link rel="canonical" href={url.href} />
+  <link rel="canonical" href={url} />
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
@@ -31,12 +29,9 @@ const url = new URL(Astro.request.url);
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div data-wrapper="Post" class="grid grid-cols-1 grid-rows-[auto_1fr_auto]">
-    <PostHeader title={content.title} date={content.date} />
-    <main class="px-8 pb-16 grid grid-cols-1 grid-rows-[1fr_auto]">
-      <article id="post" class="max-w-4xl mx-auto w-full">
-        <slot />
-      </article>
+  <div data-wrapper="404" class="grid grid-cols-1 grid-rows-[1fr_auto]">
+    <main class="flex items-center justify-center">
+      <h1 class="text-4xl font-bold">404 Not Found.</h1>
     </main>
     <footer class="px-8">
       <div class="relative w-full max-w-4xl mx-auto flex items-center justify-center h-12">
@@ -46,56 +41,3 @@ const url = new URL(Astro.request.url);
   </div>
 </body>
 </html>
-
-<style is:global>
-  #post > * + * {
-    @apply mt-4;
-  }
-  #post h1 {
-    @apply text-2xl;
-  }
-  #post > * + h1  {
-    @apply mt-16;
-  }
-  #post h2 {
-    @apply text-xl leading-8;
-  }
-  #post > * + h2  {
-    @apply mt-16;
-  }
-  #post h3 {
-    @apply text-lg leading-8;
-  }
-  #post > * + h3 {
-    @apply mt-12;
-  }
-  #post h4, #post h5, #post h6 {
-    @apply text-base leading-8;
-  }
-  #post > * + h4, #post > * + h5, #post > * + h6 {
-    @apply mt-12;
-  }
-  #post p {
-    @apply text-base leading-8;
-  }
-  #post pre {
-    @apply px-4 py-2;
-  }
-  #post ul {
-    @apply pl-6;
-    list-style: disc;
-  }
-  #post ol {
-    @apply pl-6;
-    list-style: decimal;
-  }
-  #post blockquote * {
-    @apply pl-4 text-neutral-400 border-l-2 border-neutral-400;
-  }
-  #post a {
-    @apply text-sky-500 underline underline-offset-2 hover:no-underline;
-  }
-  #post hr {
-    @apply border-neutral-400;
-  }
-</style>
