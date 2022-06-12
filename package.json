@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "tsumic",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,14 +7,12 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "pages": "gh-pages -d dist",
     "deploy": "rm -rf dist && yarn build && gh-pages -d dist"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
     "astro": "^1.0.0-beta.40",
-    "gh-pages": "^4.0.0",
-    "solid-js": "^1.3.6"
+    "gh-pages": "^4.0.0"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.0"
