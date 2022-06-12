@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://yend724.github.io',
-  base: '/learning-coding-math/',
+  base: '/tsumic',
   trailingSlash: 'always',
   markdown: {
     drafts: true,
