@@ -10,6 +10,20 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{site.siteName}</title>
+  <meta name="description" content={site.description} />
+  <meta property="og:site_name" content={site.siteName} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={site.siteName} />
+  <meta property="og:description" content={site.description} />
+  <!-- <meta property="og:image" content="https://tsumic.yend.dev/img/ogp.png" /> -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:site" content="@yend724" />
+  <meta property="twitter:creator" content="@yend724" />
+  <!-- <link rel="canonical" href="https://tsumic.yend.dev"> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
