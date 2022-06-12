@@ -6,13 +6,11 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "deploy": "rm -rf dist && yarn build && gh-pages -d dist"
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
-    "astro": "^1.0.0-beta.40",
-    "gh-pages": "^4.0.0"
+    "astro": "^1.0.0-beta.40"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.0"
