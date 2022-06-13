@@ -6,7 +6,6 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://tsumic.yend.dev',
   base: '/',
-  trailingSlash: 'always',
   markdown: {
     drafts: true,
   }

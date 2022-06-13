@@ -1,41 +1,14 @@
 ---
 import "@/styles/common.css"
+import Head from "@/components/ui/Head.astro"
 import site from "@/data/site.json"
 const url = new URL(Astro.request.url);
+const canonical = url.href;
 ---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Not Found | {site.siteName}</title>
-  <meta name="description" content={site.description} />
-  <meta property="og:site_name" content={site.siteName} />
-  <meta property="og:type" content="article">
-  <meta property="og:title" content={`404 Not Found | ${site.siteName}`} />
-  <meta property="og:description" content={site.description} />
-  <meta property="og:image" content={`${url.origin}/img/ogp.png`} />
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:site" content="@yend724" />
-  <meta property="twitter:creator" content="@yend724" />
-  <link rel="canonical" href={url} />
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVGS2C72KX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-DVGS2C72KX');
-  </script>
+  <Head title={`404 Not Found | ${site.siteName}`} description={site.description} canonical={canonical} />
 </head>
 <body>
   <div data-wrapper="404" class="grid grid-cols-1 grid-rows-[1fr_auto]">
