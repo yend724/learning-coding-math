@@ -1,6 +1,7 @@
 ---
 import "@/styles/common.css"
 import Head from "@/components/ui/Head.astro"
+import Footer from "@/components/ui/Footer.astro"
 import site from "@/data/site.json"
 const url = new URL(Astro.request.url);
 const canonical = url.href;
@@ -15,11 +16,7 @@ const canonical = url.href;
     <main class="flex items-center justify-center">
       <h1 class="text-4xl font-bold">404 Not Found.</h1>
     </main>
-    <footer class="px-8">
-      <div class="relative w-full max-w-4xl mx-auto flex items-center justify-center h-12">
-        <small>© 2022 YEND</small>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </body>
 </html>
