@@ -28,8 +28,11 @@ const canonical = url.href;
 </html>
 
 <style is:global>
+  #post > * {
+    @apply break-all;
+  }
   #post > * + * {
-    @apply mt-4;
+    @apply mt-6;
   }
   #post h1 {
     @apply text-2xl;
@@ -38,28 +41,35 @@ const canonical = url.href;
     @apply mt-16;
   }
   #post h2 {
-    @apply text-xl leading-8;
+    @apply text-xl;
   }
   #post > * + h2  {
     @apply mt-16;
   }
   #post h3 {
-    @apply text-lg leading-8;
+    @apply text-lg;
   }
   #post > * + h3 {
     @apply mt-12;
   }
   #post h4, #post h5, #post h6 {
-    @apply text-base leading-8;
+    @apply text-base;
   }
   #post > * + h4, #post > * + h5, #post > * + h6 {
     @apply mt-12;
   }
   #post p {
-    @apply text-base leading-8;
+    @apply text-base;
   }
   #post pre {
-    @apply px-4 py-2;
+    @apply p-4;
+  }
+  #post pre > code {
+    @apply p-0 bg-transparent;
+    color: inherit;
+  }
+  #post code {
+    @apply mx-1 px-1 bg-neutral-700;
   }
   #post ul {
     @apply pl-6;
@@ -68,6 +78,9 @@ const canonical = url.href;
   #post ol {
     @apply pl-6;
     list-style: decimal;
+  }
+  #post li + li {
+    @apply mt-2;
   }
   #post blockquote * {
     @apply pl-4 text-neutral-400 border-l-2 border-neutral-400;

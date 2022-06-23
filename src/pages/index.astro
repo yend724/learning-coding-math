@@ -25,7 +25,7 @@ const canonical = url.href;
         <div class="relative flex flex-col gap-y-4 max-w-4xl h-full mx-auto pb-16">
           <div class="absolute top-0 left-0 w-[3px] h-full bg-slate-600"></div>
           {
-            allPosts.map(async (post)=>{
+            allPosts.reverse().map((post)=>{
               const d = new Date(post.frontmatter.date);
               const published = `${d.getFullYear()}.${("00" + (d.getMonth() + 1)).slice(-2)}.${("00" + d.getDate()).slice(-2)}`
               return (
