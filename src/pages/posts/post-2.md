@@ -32,7 +32,7 @@ date: 2022-06-19
 上記の手順をもとに`JavaScript`で実装する。
 
 ```js
-// 2 ~ 30までに存在する素数
+// 2 ~ 30 までに存在する素数を求める
 const N = 30;
 
 // flgは素数のフラグ。最初は全て素数としてセットして、素数じゃないものはふるい落としていく
@@ -54,14 +54,14 @@ for (let i = 2; i < max; i++) {
   // flg が false なら既に素数じゃないのでスキップ
   if (!targets[i].flg) continue;
 
-  // i　（素数）の倍数をふるい落とす
+  // i（素数）の倍数をふるい落とす
   for (let j = i * 2; j <= N; j += i) {
-    // 素数じゃないので flg を　false　に
+    // 素数じゃないので flg を false に
     targets[j].flg = false;
   }
 }
 
-// targets は [{flg: false, value: 0},...] なので　 flg が true　の value だけを配列として取り出す
+// targets は [{flg: false, value: 0},...] なので　　flg が true　の value だけを配列として取り出す
 const primeNumbers = targets.reduce((acc, cur) => {
   if (cur.flg) {
     acc.push(cur.value);
