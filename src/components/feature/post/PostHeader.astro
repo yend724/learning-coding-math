@@ -9,7 +9,7 @@ const d = new Date(date);
 const published = `${d.getFullYear()}.${("00" + (d.getMonth() + 1)).slice(-2)}.${("00" + d.getDate()).slice(-2)}`
 ---
 <header class="px-8">
-  <div class="relative flex flex-col justify-center items-center gap-y-2 w-full max-w-4xl min-h-[8rem] mx-auto py-16">
+  <div class="relative flex flex-col justify-center items-center gap-y-2 w-full max-w-3xl min-h-[8rem] mx-auto py-16">
     <a class="absolute top-4 left-0 block w-8 h-8 indent-[100%] whitespace-nowrap overflow-hidden" href="/"><Icon title="トップへもどる" hidden={true} />トップへもどる</a>
     <h1 class="text-2xl text-center font-bold">{title}</h1>
     <p><time datetime={published}>{published}</time></p>
