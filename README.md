@@ -2,7 +2,7 @@
 
 数学や物理をはじめとしたCreative Codingの技法を学ぶブログ。
 
-URL:https://tsumic.yend.dev/
+URL: https://tsumic.yend.dev/
 
 ## Install
 
