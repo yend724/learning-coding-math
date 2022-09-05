@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* common */
+html,
+body {
+  @apply text-neutral-200;
+  @apply bg-neutral-900;
+  font-family: "Lato", "BIZ UDGothic", sans-serif;
+}
+[data-wrapper] {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}

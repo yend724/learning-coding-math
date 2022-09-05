@@ -1,42 +1,36 @@
-# Welcome to [Astro](https://astro.build)
+# Creative Codingの積み木
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
+数学や物理をはじめとしたCreative Codingの技法を学ぶブログ。
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+URL: https://tsumic.yend.dev/
 
-## 🚀 Project Structure
+## Install
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```shell
+$ cd tsumic
+$ yarn install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Run locally
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+Start dev server.
 
-Any static assets, like images, can be placed in the `public/` directory.
+```shell
+$ yarn dev
+```
 
-## 🧞 Commands
+## Build
 
-All commands are run from the root of the project, from a terminal:
+Builds the project for production to the dist folder.
 
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
+```shell
+$ yarn build
+```
 
-## 👀 Want to learn more?
+## Preview
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Locally preview production build.
+
+```shell
+$ yarn start
+```
