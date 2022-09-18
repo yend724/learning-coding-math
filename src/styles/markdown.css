@@ -71,7 +71,7 @@
 #post .remark-highlight > pre[data-language] {
   margin-top: 3rem;
 }
-#post .remark-highlight > pre::before {
+#post .remark-highlight > pre[data-language]::before {
   content: attr(data-language);
   position: absolute;
   top: 0;
@@ -82,6 +82,6 @@
   border-radius: 0.3rem 0.3rem 0rem 0rem;
   @apply bg-cyan-600;
 }
-#post .remark-highlight > pre[class*="language-"] {
+#post .remark-highlight > pre[data-language] {
   border-radius: 0rem 0.3rem 0.3rem 0.3rem;
 }

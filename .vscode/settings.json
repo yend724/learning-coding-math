@@ -1,0 +1,7 @@
+{
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "diffEditor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  }
+}
