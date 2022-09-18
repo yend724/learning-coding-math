@@ -36,6 +36,7 @@ const context = canvas.getContext("2d") as CanvasRenderingContext2D;
 
 canvas.width = 800;
 canvas.height = 800;
+// Canvasの[0,0]を中心に移動
 context.translate(canvas.width / 2, canvas.height / 2);
 
 // 直線の方程式
