@@ -1,6 +1,6 @@
-import { Header } from "@/components/ui/Header";
-import { Footer } from "@/components/ui/Footer";
-import { PostList } from "@/components/feature/post/PostList";
+import { Header } from '@/components/ui/Header';
+import { Footer } from '@/components/ui/Footer';
+import { PostList } from '@/components/feature/post/PostList';
 
 type HomeIndexProps = {
   postList: {
@@ -19,7 +19,7 @@ export const HomeIndex: React.FC<HomeIndexProps> = ({ postList }) => {
           <PostList postList={postList} />
         </div>
       </main>
-      <Footer isTop />
+      <Footer />
     </>
   );
 };

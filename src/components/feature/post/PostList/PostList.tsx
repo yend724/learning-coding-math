@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 type PostListProps = {
   postList: {
     id: string;
@@ -10,11 +10,13 @@ type PostListProps = {
 export const PostList: React.FC<PostListProps> = ({ postList }) => {
   return (
     <div className="relative flex flex-col gap-y-4 max-w-3xl h-full mx-auto pb-16">
-      <div className="absolute top-0 left-0 w-[3px] h-full bg-slate-600"></div>
-      {postList.map(post => {
+      {postList.map((post, i) => {
         const { id, title, path, date } = post;
         return (
           <article key={id} className="relative pl-8">
+            {i !== postList.length - 1 && (
+              <div className="absolute top-4 left-0 w-[3px] h-[calc(100%_+_1rem)] bg-slate-600"></div>
+            )}
             <svg
               viewBox="0 0 10 10"
               className="absolute top-4 left-[-3px] text-slate-600 overflow-visible w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)]"
