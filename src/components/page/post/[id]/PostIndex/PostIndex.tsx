@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { Footer } from "@/components/ui/Footer";
-import { Icon } from "@/components/ui/Icon";
+import Link from 'next/link';
+import { Footer } from '@/components/ui/Footer';
+import { Icon } from '@/components/ui/Icon';
 
 type PostIndexProps = {
   post: {
@@ -14,8 +14,8 @@ export const PostIndex: React.FC<PostIndexProps> = ({ post }) => {
   const { title, date, contentHtml } = post;
   return (
     <>
-      <header className="px-8">
-        <div className="relative flex flex-col justify-center items-center gap-y-2 w-full max-w-3xl min-h-[8rem] mx-auto py-16">
+      <header className="px-6">
+        <div className="relative flex flex-col justify-center items-center gap-y-4 w-full max-w-3xl mx-auto pt-16 pb-8">
           <Link href="/">
             <a className="absolute top-4 left-0 block w-8 h-8 indent-[100%] whitespace-nowrap overflow-hidden">
               <Icon />
@@ -28,7 +28,7 @@ export const PostIndex: React.FC<PostIndexProps> = ({ post }) => {
           </p>
         </div>
       </header>
-      <main className="px-8 pb-16 grid grid-cols-1 grid-rows-[1fr_auto]">
+      <main className="px-6 pb-16 grid grid-cols-1 grid-rows-[1fr_auto]">
         <article
           id="post"
           className="max-w-3xl mx-auto w-full"

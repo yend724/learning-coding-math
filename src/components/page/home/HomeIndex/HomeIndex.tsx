@@ -14,7 +14,7 @@ export const HomeIndex: React.FC<HomeIndexProps> = ({ postList }) => {
   return (
     <>
       <Header />
-      <main className="px-8">
+      <main className="px-6 mt-8">
         <div className="mx-auto h-full">
           <PostList postList={postList} />
         </div>

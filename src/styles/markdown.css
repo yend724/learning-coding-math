@@ -2,25 +2,25 @@
   @apply break-all;
 }
 #post > * + * {
-  @apply mt-6;
+  @apply mt-4;
 }
 #post h1 {
   @apply text-2xl;
 }
 #post > * + h1 {
-  @apply mt-16;
+  @apply mt-8;
 }
 #post h2 {
   @apply text-xl;
 }
 #post > * + h2 {
-  @apply mt-16;
+  @apply mt-8;
 }
 #post h3 {
   @apply text-lg;
 }
 #post > * + h3 {
-  @apply mt-12;
+  @apply mt-8;
 }
 #post h4,
 #post h5,
@@ -30,7 +30,7 @@
 #post > * + h4,
 #post > * + h5,
 #post > * + h6 {
-  @apply mt-12;
+  @apply mt-8;
 }
 #post p {
   @apply text-base;
@@ -69,7 +69,7 @@
   position: relative;
 }
 #post .remark-highlight > pre[data-language] {
-  margin-top: 3rem;
+  @apply mt-16;
 }
 #post .remark-highlight > pre[data-language]::before {
   content: attr(data-language);
