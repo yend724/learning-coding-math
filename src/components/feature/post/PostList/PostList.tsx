@@ -13,25 +13,9 @@ export const PostList: React.FC<PostListProps> = ({ postList }) => {
       {postList.map((post, i) => {
         const { id, title, path, date } = post;
         return (
-          <article key={id} className="relative pl-8">
-            {i !== postList.length - 1 && (
-              <div className="absolute top-4 left-0 w-[3px] h-[calc(100%_+_1rem)] bg-slate-600"></div>
-            )}
-            <svg
-              viewBox="0 0 10 10"
-              className="absolute top-4 left-[-3px] text-slate-600 overflow-visible w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)]"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="currentColor"
-                className="fill-sky-300"
-                strokeWidth="2"
-              ></circle>
-            </svg>
+          <article key={id} className="relative">
             <Link href={path}>
-              <a className="block p-2 rounded hover:bg-slate-300/10">
+              <a className="block p-4 rounded bg-neutral-800">
                 <time className="text-sm text-neutral-400" dateTime={date}>
                   {date}
                 </time>

@@ -2,30 +2,30 @@
   @apply break-all;
 }
 #post > * + * {
-  @apply mt-4;
+  @apply mt-6;
 }
 #post h1 {
-  @apply text-2xl;
+  @apply text-3xl;
 }
 #post > * + h1 {
-  @apply mt-8;
+  @apply mt-20;
 }
 #post h2 {
-  @apply text-xl;
+  @apply text-2xl;
 }
 #post > * + h2 {
-  @apply mt-8;
+  @apply mt-16;
 }
 #post h3 {
-  @apply text-lg;
+  @apply text-xl;
 }
 #post > * + h3 {
-  @apply mt-8;
+  @apply mt-12;
 }
 #post h4,
 #post h5,
 #post h6 {
-  @apply text-base;
+  @apply text-lg;
 }
 #post > * + h4,
 #post > * + h5,

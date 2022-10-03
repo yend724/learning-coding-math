@@ -15,7 +15,7 @@ export const PostIndex: React.FC<PostIndexProps> = ({ post }) => {
   return (
     <>
       <header className="px-6">
-        <div className="relative flex flex-col justify-center items-center gap-y-4 w-full max-w-3xl mx-auto pt-16 pb-8">
+        <div className="relative flex flex-col justify-center items-center gap-y-4 w-full max-w-3xl mx-auto pt-16 pb-12">
           <Link href="/">
             <a className="absolute top-4 left-0 block w-8 h-8 indent-[100%] whitespace-nowrap overflow-hidden">
               <Icon />
